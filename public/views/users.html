@@ -1,0 +1,31 @@
+<div class="container">
+
+  <div class="row">
+    <h1 class="hero">Users!</h1>
+    <div class="form-group col-md-10">
+      <input type="text" class="form-control" ng-model="userSearch" placeholder="Search For Users...">
+    </div>
+
+    <div class="col-md-2">
+      <button class="btn btn-primary cbtn" ui-sref="usersNew">New User</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <table class="table table-striped table-hover">
+      <thead>
+        <th>#</th>
+        <th>Name</th>
+        <th>Email</th>
+      </thead>
+      <tbody>
+        <tr ng-repeat="user in users | filter: userSearch" ui-sref="usersShow({id: user._id})">
+          <td>{{ $index }}</td>
+          <td>{{ user.firstName }} {{ user.lastName }}</td>
+          <td>{{ user.email }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

@@ -1,0 +1,16 @@
+<div class="container">
+
+  <h1 class="hero">Artist!</h1>
+
+  <div class="row artistSection">
+    <div class="section-header">
+      <h1 class="section-heading">{{ artist.firstName }} {{ artist.lastName }}</h1>
+    </div>
+    <div class="section-body">
+      <p><strong>Genre:</strong> {{ artist.genre }}</p>
+      <button class="btn btn-info" ui-sref="artistsUpdate({id: artist._id })">Update</button>
+      <button class="btn btn-danger" ng-click="deleteArtist()">Delete</button>
+    </div>
+  </div>
+
+</div><!-- Container End -->

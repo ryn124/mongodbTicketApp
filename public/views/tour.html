@@ -1,0 +1,31 @@
+  <div class="container">
+
+    <h1 class="hero">Tour</h1>
+
+    <div class="row tourSection">
+      <div class="section-header">
+        <h1 class="section-heading">{{ tour.tourName }}</h1>
+      </div>
+      <div class="section-body">
+        <p><strong>Dates:</strong> {{ tour.startDate | date: 'shortDate' }} - {{ tour.endDate | date: 'shortDate' }}</p>
+        <div ng-show="tour.artists.length">
+          <h2>Artists:</h2>
+            <ul>
+              <li ng-repeat="artist in tour.artists">{{ artist.firstName }} {{ artist.lastName }}</li>
+            </ul>
+        </div>
+
+        <div ng-show="tour.shows.length">
+          <h2>Shows:</h2>
+          <ul>
+            <li ng-repeat="show in tour.shows">{{ show.location }} -  {{ show.date | date: 'MM/dd'}}</li>
+          </ul>
+
+        </div>
+
+        <button class="btn btn-info" ui-sref="toursUpdate({id: tour._id })">Update</button>
+        <button class="btn btn-danger" ng-click="deleteTour()">Delete</button>
+      </div>
+    </div>
+
+  </div><!-- Container End -->

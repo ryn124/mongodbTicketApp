@@ -1,0 +1,17 @@
+<div class="container">
+
+  <h1 class="hero">Show!</h1>
+
+  <div class="row showSection">
+    <div class="section-header">
+      <h1 class="section-heading">{{ show.tourName }}</h1>
+    </div>
+    <div class="section-body">
+      <p><strong>Date:</strong> {{ show.date | date: 'longDate'}}</p>
+      <p><strong>Location:</strong> {{ show.location }}</p>
+      <button class="btn btn-info" ui-sref="showsUpdate({id: show._id })">Update</button>
+      <button class="btn btn-danger" ng-click="deleteShow()">Delete</button>
+    </div>
+  </div>
+
+</div><!-- Container End -->

@@ -1,0 +1,29 @@
+<div class="container">
+
+  <div class="row">
+    <h1 class="hero">Artists!</h1>
+    <div class="form-group col-md-10">
+      <input type="text" class="form-control" ng-model="artistSearch" placeholder="Search For Artists...">
+    </div>
+
+    <div class="col-md-2">
+      <button class="btn btn-primary cbtn" ui-sref="artistsNew">New Artist</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <table class="table table-striped table-hover">
+      <thead>
+        <th>#</th>
+        <th>Name</th>
+      </thead>
+      <tbody>
+        <tr ng-repeat="artist in artists | filter: artistSearch" ui-sref="artistsShow({id: artist._id})">
+          <td>{{ $index }}</td>
+          <td>{{ artist.firstName }} {{ artist.lastName }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div><!-- Container End -->

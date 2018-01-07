@@ -1,0 +1,27 @@
+<div class="container">
+
+  <h1 class="hero">{{ heading }}</h1>
+
+  <div class="row">
+    <h3 class="sectionHeader">Artist Information</h3>
+
+    <div class="form-group col-md-6">
+      <label>Artist Name / Stage Name</label>
+      <input type="text" class="form-control" placeholder="First Name" ng-model="artist.firstName">
+    </div>
+
+    <div class="form-group col-md-6">
+      <label>Last Name</label>
+      <input type="text" class="form-control" placeholder="Last Name (optional)" ng-model="artist.lastName">
+    </div>
+
+    <div class="form-group col-md-12">
+      <label>Genre</label>
+      <input type="text" class="form-control" placeholder="Pop" ng-model="artist.genre">
+    </div>
+
+    <button ng-click="addArtist()" ng-show="submitButton" class="btn cbtn btn-primary btn-lg pull-right ">Submit</button>
+    <button ng-click="updateArtist()" ng-show="!submitButton" class="btn cbtn btn-success btn-lg pull-right ">Save</button>
+  </div>
+
+</div><!-- Container End -->

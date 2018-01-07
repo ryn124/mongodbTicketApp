@@ -1,0 +1,37 @@
+<div class="container">
+
+  <h1 class="hero">{{ heading }}</h1>
+
+  <div class="row">
+    <h3 class="sectionHeader">Show Information</h3>
+
+    <div class="form-group col-md-6">
+      <label>Tour Name</label>
+      <input type="text" class="form-control" placeholder="20/20 Experience" ng-model="show.tourName">
+    </div>
+
+    <div class="form-group col-md-6">
+      <label>Show Date</label>
+      <input type="date" class="form-control" ng-model="show.date">
+    </div>
+
+    <div class="form-group col-md-12">
+      <label>Show Location</label>
+      <input type="text" class="form-control" placeholder="Dallas" ng-model="show.location">
+    </div>
+
+    <!--
+      FOR TICKETS
+      <div class="form-group col-md-6">
+        <label>Artist</label>
+        <select class="form-control" ng-options="artist.id as artist.firstName for artist in artists" ng-model="show.artistId">
+        </select>
+      </div>
+    -->
+
+
+    <button ng-click="addShow()" ng-show="submitButton" class="btn cbtn btn-primary btn-lg pull-right ">Submit</button>
+    <button ng-click="updateShow()" ng-show="!submitButton" class="btn cbtn btn-success btn-lg pull-right ">Save</button>
+  </div>
+
+</div><!-- Container End -->
